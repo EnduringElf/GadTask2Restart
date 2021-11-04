@@ -1,0 +1,13 @@
+{
+  "conversations": [
+    {
+      "Author": "Jane",
+      "Diag": "You don't have to do this. We can find another way to make money!",
+      "Index": 0,
+      "NextIndex": 1,
+      "Item": null,
+      "ItemDiag": null
+    }
+    
+  ]
+}

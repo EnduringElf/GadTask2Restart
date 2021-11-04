@@ -231,7 +231,6 @@ GameObject:
   - component: {fileID: 386190566}
   - component: {fileID: 386190565}
   - component: {fileID: 386190564}
-  - component: {fileID: 386190568}
   m_Layer: 0
   m_Name: NPC_test
   m_TagString: Untagged
@@ -297,21 +296,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &386190568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386190563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25146cbc73337ad4a8c2cc23c285997b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Manager: {fileID: 1448245420}
-  manager_script: {fileID: 0}
-  Author: Jane
 --- !u!1 &512843052
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,8 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonfile: {fileID: 4900000, guid: 3c11786d03e0fe243ac2c9731facef22, type: 3}
   dialogue: {fileID: 0}
-  npcs:
-  - {fileID: 386190563}
+  npcs: []
   currentauthor: 
   currenttext: 
 --- !u!4 &1448245422

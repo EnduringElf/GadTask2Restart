@@ -1,13 +1,78 @@
-{
-  "conversations": [
-    {
-      "Author": "Jane",
-      "Diag": "You don't have to do this. We can find another way to make money!",
-      "Index": 0,
-      "NextIndex": 1,
-      "Item": null,
-      "ItemDiag": null
-    }
-    
-  ]
-}
+	[
+	
+	{
+		"Author" : "Jane",
+		"Diag":"You don't have to do this. We can find another way to make money!",
+		"Item":null,
+		"ItemDiag":null
+	},
+	{
+		"Author" : "Jane",
+		"Diag" : "If I don't then we'll get kicked out onto the streets! Can't you see? I'm doing this for us. The economy is going south fast and my only goal is to feed you.",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	{
+		"Author" : "Jane",
+		"Diag" : "Okay, just please, be safe. I'll try and think of something else in the meantime.",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	
+	
+	
+	{
+		"Author" : "Thief",
+		"Diag" : "This'll be a quick in and out. Don't make a sound and don't leave a trace.",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	{
+		"Author" : "Thief",
+		"Diag" : "Before we go, I got us a new toy we can use. I call it the Claw Grabber. With this bad boy we'll be able to get anything from a distance. Should be useful.",
+		"Item" : "Claw_Grabber",
+		"ItemDiag" : "You'll be a pro with it in no time!"
+	},
+	{
+		"Author" : "Thief",
+		"Diag" : "Guess we'll just have to wait and see.",
+		"Item" : "Claw_Grabber",
+		"ItemDiag" : "This could definitely make my life easier to not get spotted."
+	},
+	
+	
+	
+	{
+		"Author" : "Officer",
+		"Diag" : "Evening, what are you doing out so late?",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	{
+		"Author" : "Officer",
+		"Diag" : "Just going out for my nightly jog officer.",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	{
+		"Author" : "Officer",
+		"Diag" : "Is that so? Well you be safe then.",
+		"Item" : "HAS_BAG",
+		"ItemDiag" : "Is that so? Strange thing to be having when you're just going on a jog..."
+	},
+	{
+		"Author" : "Officer",
+		"Diag" : "I need to go now.",
+		"Item" : null,
+		"ItemDiag" : null
+	},
+	{
+		"Author" : "Officer",
+		"Diag" : "Is that so? Well you be safe then.",
+		"Item" : "HAS_SCRATCHES",
+		"ItemDiag" : "You look injured, maybe come with me."
+	}
+	
+	]
+
+

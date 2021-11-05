@@ -47,7 +47,7 @@ public class Linkedlist : MonoBehaviour
     {
         //Debug.Log("adding linknode diag " + linknode.Diag);
         linknode newNode = linknode;
-        Debug.Log("new node now has the following diag: " + newNode.Diag);
+        //Debug.Log("new node now has the following diag: " + newNode.Diag);
         if (linkedlist.Head == null)
         {
             newNode.prev = null;
@@ -70,71 +70,98 @@ public class Linkedlist : MonoBehaviour
         }
         return temp;
     }
-    private void empty()
-    {
-    //public linknode SearchByIndexforlinknode(Linkedlist linkedlist , int index)
-    //{
-    //    linknode temphead = linkedlist.Head;
-    //    //string temp;
-    //    while(temphead.Index != index)
-    //    {
-    //        temphead = temphead.Next;
-    //    }
-    //    return temphead;
-    //}
+    
+        public linknode SearchByIndexforlinknode(Linkedlist linkedlist, int index)
+        {
+            linknode temphead = linkedlist.Head;
+            //string temp;
+            while (temphead.Index != index)
+            {
+                temphead = temphead.Next;
+            }
+            return temphead;
+        }
 
-    //public string searchfornextindex(Linkedlist linkedlist, int nextindex)
-    //{
-    //    linknode temp = linkedlist.Head;
-    //    while(temp.Index != nextindex)
-    //    {
-    //        temp = temp.Next;
-    //    }
-    //    return temp.Diag;
-    //}
+        public string searchfornextindex(Linkedlist linkedlist, int nextindex)
+        {
+            linknode temp = linkedlist.Head;
+            while (temp.Index != nextindex)
+            {
+                temp = temp.Next;
+            }
+            return temp.Diag;
+        }
 
-    //linknode SearchByAuthor(Linkedlist linkedlist,string author)
-    //{
-    //    linknode temphead = linkedlist.Head;
-    //    //string temp;
-    //    while (temphead.Author != author)
-    //    {
-    //        temphead = temphead.Next;
-    //    }
-    //    return temphead;
-    //}
+        linknode SearchByAuthor(Linkedlist linkedlist, string author)
+        {
+            linknode temphead = linkedlist.Head;
+            //string temp;
+            while (temphead.Author != author)
+            {
+                temphead = temphead.Next;
+            }
+            return temphead;
+        }
 
-    //public string searchbyauthorfirstforfirstdiag(Linkedlist linkedlist, string author)
-    //{
+        public string searchbyauthorfirstforfirstdiag(Linkedlist linkedlist, string author)
+        {
 
-    //    linknode temphead = linkedlist.Head;
-    //    if(temphead.prev == null)
-    //    {
-    //        while (temphead.Author != author)
-    //        {
-    //            if (temphead == null)
-    //            {
-    //                break;
-    //            }
-    //            temphead = temphead.Next;
-    //        }
-    //        return temphead.Diag;
-    //    }
-    //    else
-    //    {
-    //        Debug.LogError("prev exist ");
-    //        return "broken";
-    //    }
-       
-    //}
-    }
+            linknode temphead = linkedlist.Head;
+            if (temphead.prev == null)
+            {
+                while (temphead.Author != author)
+                {
+                    if (temphead == null)
+                    {
+                        break;
+                    }
+                    temphead = temphead.Next;
+                }
+                return temphead.Diag;
+            }
+            else
+            {
+                Debug.LogError("prev exist ");
+                return "broken";
+            }
+
+        }
+    
     
 
     public linknode getNext(Linkedlist list)
     {
         linknode temp = list.Head;
-        temp = temp.Next;
-        return temp;
+        if (temp.Next != null)
+        {
+            temp = temp.Next;
+            return temp;
+        }
+        else
+        {
+            Debug.LogError("getnext has return null");
+            return null;
+        }
+        
+        
+    }
+
+    public linknode getBefore(Linkedlist list)
+    {
+        linknode temp = list.Head;
+        if (temp.prev != null)
+        {
+            temp = temp.prev;
+            return temp;
+        }
+        else
+        {
+            Debug.LogError("getbefore has return null");
+            return null;
+        }
+        
+        
+
     }
 
 }

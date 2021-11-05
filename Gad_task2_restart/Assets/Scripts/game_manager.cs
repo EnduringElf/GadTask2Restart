@@ -6,11 +6,9 @@ using TMPro;
 [System.Serializable]
 public class game_manager : MonoBehaviour
 {
-
-
     public TextAsset jsonfile;
     public Linkedlist dialogue;
-    linknode[] test;
+    public linknode[] test;
     public GameObject[] npcs;
 
     public string currentauthor;
@@ -29,14 +27,16 @@ public class game_manager : MonoBehaviour
     {
 
         dialogue = new Linkedlist();
+        Debug.Log("json file:" + jsonfile.text);
         test = JsonHelper.getJsonArray<linknode>(jsonfile.text);
+        Debug.Log("test postition 0 diag:" + test[0].Diag);
         for (int i = 0; i < test.Length; i++)
         {
             dialogue.Addnodelast(dialogue, test[i]);
             //Debug.Log("from array next index " + i + ": " + test[i].NextIndex);
             //Debug.Log("dialogue node author:" + dialogue.Head.Author);
         }
-        dialogue.setHeadto1(dialogue);
+        //dialogue.setHeadto1(dialogue);
         //dialogue.DisplayLastNode(dialogue);
         //dialogue.displayhead(dialogue);
         //Debug.Log("next diag after head is:" + dialogue.getNext(dialogue).Diag);
@@ -50,11 +50,8 @@ public class game_manager : MonoBehaviour
 
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
+      
+        
 
         //void LoadDialoguebyname(string author)
         //{

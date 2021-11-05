@@ -7,6 +7,7 @@
 	},
 	{
 		"Author" : "Jane",
+		"Player" : "player",
 		"Diag" : "If I don't then we'll get kicked out onto the streets! Can't you see? I'm doing this for us. The economy is going south fast and my only goal is to feed you.",
 		"Item" : null,
 		"ItemDiag" : null
@@ -22,6 +23,7 @@
 	
 	{
 		"Author" : "Thief",
+"Player" : "player",
 		"Diag" : "This'll be a quick in and out. Don't make a sound and don't leave a trace.",
 		"Item" : null,
 		"ItemDiag" : null
@@ -34,6 +36,7 @@
 	},
 	{
 		"Author" : "Thief",
+"Player" : "player",
 		"Diag" : "Guess we'll just have to wait and see.",
 		"Item" : "Claw_Grabber",
 		"ItemDiag" : "This could definitely make my life easier to not get spotted."
@@ -49,6 +52,7 @@
 	},
 	{
 		"Author" : "Officer",
+"Player" : "player",
 		"Diag" : "Just going out for my nightly jog officer.",
 		"Item" : null,
 		"ItemDiag" : null
@@ -61,6 +65,7 @@
 	},
 	{
 		"Author" : "Officer",
+"Player" : "player",
 		"Diag" : "I need to go now.",
 		"Item" : null,
 		"ItemDiag" : null

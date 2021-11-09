@@ -23,9 +23,12 @@ public class Movement : MonoBehaviour
 
     public bool DisableControls = false;
 
+    private Animator npcAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
+        npcAnimator = gameObject.GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         setMaxVelocity(maxVelocity);
         spCollider = GetComponent<SphereCollider>();
@@ -47,8 +50,14 @@ public class Movement : MonoBehaviour
             float Horizontal = Input.GetAxisRaw("Horizontal");
             float Verticle = Input.GetAxisRaw("Vertical");
 
+
             Vector3 controllmove = new Vector3(Horizontal, 0, Verticle);
             rb.velocity += controllmove * Speed * Time.deltaTime;
+            
+            if(rb.velocity.magnitude > 0)
+            {
+                npcAnimator.SetBool("IsMoving", false);
+            }
 
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {

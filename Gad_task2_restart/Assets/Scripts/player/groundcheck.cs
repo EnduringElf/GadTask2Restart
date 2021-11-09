@@ -10,7 +10,9 @@ public class groundcheck : MonoBehaviour
     {
         isGrounded = true;
     }
-    private void OnTriggerEnter(Collider other)
+
+    
+    private void OnTriggerStay(Collider other)
     {
         isGrounded = true;
     }

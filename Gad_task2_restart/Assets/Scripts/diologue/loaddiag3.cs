@@ -123,6 +123,18 @@ public class loaddiag3 : MonoBehaviour
             Debug.Log("found plyer");
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        hasplayer = false;
+        clearui();
+    }
+
+    private void clearui()
+    {
+        Author.text = "";
+        player.text = "";
+        Diolouge.text = "";
+    }
 
     private void displaydiolouge()
     {

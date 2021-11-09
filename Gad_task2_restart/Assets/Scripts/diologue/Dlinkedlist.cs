@@ -109,7 +109,6 @@ public class Dlinkedlist : MonoBehaviour
         return getBefore(temp);
 
     }
-
     public string displayhead(Dlinkedlist linkedlist)
     {
         return linkedlist.head.Diag;

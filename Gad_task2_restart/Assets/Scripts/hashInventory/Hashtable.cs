@@ -6,16 +6,19 @@ using UnityEngine;
 public class Hashtable<T> : MonoBehaviour
 {
     public int size { get; set; }
-    public Hashitem<T>[] inventory;
+    public Hashitem<T>[] inventory { get; set; }
     int totalitmes { get; set; }
 
     public Hashtable(int Size)
     {
-        if(Size > 0)
+        //if(Size > 0)
         {
-            Debug.Log("inizilise size:" + Size);
-            size = GetNextPrimeNumber(Size);
+            //Debug.Log("inizilise size:" + Size);
+            //size = GetNextPrimeNumber(Size);
+            size = Size;
             inventory = new Hashitem<T>[size];
+            //Debug.Log("inventory at postion 0 is" + inventory[0]);
+            //Debug.Log("inizilised final");
         }
     }
     
@@ -47,7 +50,7 @@ public class Hashtable<T> : MonoBehaviour
         {
             if (isNumPrime(i))
             {
-                Debug.Log("inizilise prime numer:" + i);
+                //Debug.Log("inizilise prime numer:" + i);
                 return i;
                 
             }
@@ -57,7 +60,7 @@ public class Hashtable<T> : MonoBehaviour
 
     }
 
-    public bool Insert(int key, T Object)
+    public bool Insert(int key, T Obj)
     {
         
         if(totalitmes == size)
@@ -67,8 +70,17 @@ public class Hashtable<T> : MonoBehaviour
         }
 
         int hash = HashFunction(key);
-        Debug.Log("before while in insert: " + hash);
-        Debug.Log(inventory);
+        //Debug.Log("before while in insert: " + hash);
+        //Debug.Log("int key: " + key);
+        //Debug.Log(inventory);
+        //Debug.Log("inventory +key: " + inventory[hash]);
+                 
+        //Debug.Log(inventory[hash]);
+        if(inventory[hash] == null)
+        {
+            inventory[hash] = new Hashitem<T>();
+            Debug.Log("inventory at " + hash + " is null");
+        }
         while (inventory[hash].key != -1)
         {
             hash++;
@@ -78,7 +90,7 @@ public class Hashtable<T> : MonoBehaviour
         Debug.Log("hash form insert:" + hash);
 
         inventory[hash].key = key;
-        inventory[hash].Object = Object;
+        inventory[hash].Object = Obj;
 
         totalitmes++;
         Debug.Log("added object");
@@ -159,15 +171,4 @@ public class Hashtable<T> : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

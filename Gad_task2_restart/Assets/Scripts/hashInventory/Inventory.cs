@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new Hashtable<GameObject>(20);
+        inventory = new Hashtable<GameObject>(100);
         int objname = inventory.HashFunction(testObj.name);
         inventory.Insert(objname,testObj);
     }

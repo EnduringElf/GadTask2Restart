@@ -8,10 +8,11 @@ public class Hashitem<Tvalue> : MonoBehaviour
     //Tkey key;
     //Tvalue value;
 
-    Hashitem()
+    public Hashitem()
     {
         key = 0;
     }
+
     ~Hashitem()
     {
 
@@ -21,8 +22,8 @@ public class Hashitem<Tvalue> : MonoBehaviour
     public Tvalue Object { get; set; }
 
     
-   bool isequal(Hashitem<Tvalue> item)
-    {
+   public bool isequal(Hashitem<Tvalue> item)
+   {
         if(key == item.key)
         {
             return true;
@@ -30,21 +31,11 @@ public class Hashitem<Tvalue> : MonoBehaviour
         else { return false; }
    }
 
-    void set(Hashitem<Tvalue> item)
+    public void set(Hashitem<Tvalue> item)
     {
         key = item.key;
         Object = item.Object;
     }
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

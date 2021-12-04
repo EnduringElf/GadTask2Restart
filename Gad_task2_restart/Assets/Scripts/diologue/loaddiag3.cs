@@ -23,12 +23,24 @@ public class loaddiag3 : MonoBehaviour
     
     void Start()
     {
+
+        findallUI();
         Author.text = "";
         Diolouge.text = "";
         player.text = "";
         Manager = GameObject.Find("Game_manager");
         
     }
+
+    private void findallUI()
+    {
+        GameObject temp = GameObject.Find("UI");
+        Author = GameObject.Find("Author").GetComponent<TMP_Text>();
+        Diolouge = GameObject.Find("Diag").GetComponent<TMP_Text>();
+        GameObject plyaertext = GameObject.Find("Player text");
+        player = plyaertext.GetComponentInChildren<TMP_Text>();
+    }
+
     void Update()
     {
         if(hasplayer == true)

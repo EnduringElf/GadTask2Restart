@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968a04e910db89d4a9783aef540690cc, type: 3}
-  m_Name: Pieter_End
+  m_Name: Thief_Start
   m_EditorClassIdentifier: 
   Dialouge:
-  - Mmmm...okay. Just be careful
+  - Hey, you there! Want a little tool?
   Speakers:
-  - Pieter
-  responses: []
-  Items: []
+  - Thief
+  responses:
+  - responseText: Maybe
+    DialougeObject: {fileID: 11400000, guid: 159b409ed22003b418e7205132e41aa5, type: 2}
+  Items:
+  - m_ObjectText: Money
+    DialougeObject: {fileID: 11400000, guid: e1dc9b9112651c8458d97b36c9df3261, type: 2}
+    m_object:
+      m_name: Money

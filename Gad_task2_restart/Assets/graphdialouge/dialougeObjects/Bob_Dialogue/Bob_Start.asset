@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dialouge:
   - Evenin'
-  - Chilly night for someone to just be walking around in parking lot
+  - Chilly night for someone to just be walking around in a parking lot.
   - Looking for something specific?
   Speakers:
   - Bob
   - Bob
   - Bob
   responses:
-  - responseText: Hi Bob, weird seeing you out of class.
+  - responseText: Hi Bob!
     DialougeObject: {fileID: 11400000, guid: 61eaf170233df734d80c25debe32d70c, type: 2}
-  - responseText: You could say that, anything interesting around here?
+  - responseText: Anything interesting?
     DialougeObject: {fileID: 11400000, guid: aac98cfecf7996542bfc4813b98fd74b, type: 2}
   Items:
   - m_ObjectText: Gun

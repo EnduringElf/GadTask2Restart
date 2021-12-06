@@ -12,13 +12,13 @@ public class Player : MonoBehaviour
         {
             if(_obj.Name != name)
             {
+                Debug.Log("item add to player inv: " + name);
                 Objects[i] = new Object(name);
                 i++;
             }
             
             
         }
-        i++;
     }
 
 

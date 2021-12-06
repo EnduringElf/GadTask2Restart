@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968a04e910db89d4a9783aef540690cc, type: 3}
-  m_Name: Pieter_End
+  m_Name: Fluff3
   m_EditorClassIdentifier: 
   Dialouge:
-  - Mmmm...okay. Just be careful
+  - Those guys in the alleyway look super shady.
   Speakers:
-  - Pieter
+  - Concerned Citizen
   responses: []
   Items: []

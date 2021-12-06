@@ -29,6 +29,8 @@ public class Parser : MonoBehaviour
                 case "up":
                     t.TokenType = TokenType.FILLER; t.LiteralValue = word; break;
                 case "FixedNpc":
+                case "Bob":
+                case "Pieter":
                 case "npc":
                 case "item":
                     t.TokenType = TokenType.OBJECT; t.LiteralValue = word;

@@ -31,11 +31,23 @@ public class Parser : MonoBehaviour
                 case "FixedNpc":
                 case "Bob":
                 case "Gun":
+                case "Money":
                 case "Pieter":
                 case "Thief":
                 case "npc":
                 case "item":
                 case "FixedItem":
+                case "Citizen":
+                case "Citizen 1":
+                case "Confused Citizen":
+                case "Concerned Citizen":
+                case "Concerning Citizen":
+                case "Citizen Cayde":
+                case "Boomer Citizen":
+                case "Questioning Citizen":
+                case "Citizen Rick":
+                case "Gamer Citizen":
+                case "Weeb Citizen":
                     t.TokenType = TokenType.OBJECT; t.LiteralValue = word;
                     //Debug.Log("added object token"); 
                     break;

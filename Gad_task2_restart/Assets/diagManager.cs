@@ -32,7 +32,6 @@ public class diagManager : MonoBehaviour
             Textaction.NPC_inrange = true;
             Debug.Log("npc in range " + Textaction.NPC_inrange);
             //Debug.Log("talking to " + dialougeUi.GetComponent<DialougeUI>() + " test diag:" );
-           
             dialougeUi.GetComponent<DialougeUI>().npcnearbyText.text = colliderobject.gameObject.name;
             
         }
@@ -43,8 +42,6 @@ public class diagManager : MonoBehaviour
             Textaction.Item_inrange = true;
             colliderobject = collision.gameObject;
             Debug.Log("item in range " + Textaction.NPC_inrange);
-            
-
             dialougeUi.GetComponent<DialougeUI>().ItemsNearbyText.text = colliderobject.gameObject.name;
         }
     }

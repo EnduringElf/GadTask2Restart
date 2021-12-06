@@ -27,7 +27,6 @@ public class NpcMovement : MonoBehaviour
         if (randomPathing)
         {
                     destionations = GameObject.FindGameObjectsWithTag("destionations");
-
         }
         
         theAgent = GetComponent<NavMeshAgent>();
@@ -45,7 +44,7 @@ public class NpcMovement : MonoBehaviour
             npcAnimator = model.GetComponent<Animator>();
                 //Debug.Log("destionation postion:" + theDestination.transform.position);
                 theAgent.SetDestination(theDestination.transform.position);
-                theAgent.speed = 10;
+                
             if (theAgent.remainingDistance != 0 )
             {
                 npcAnimator.SetBool("IsMoving", true);

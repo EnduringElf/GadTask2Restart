@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968a04e910db89d4a9783aef540690cc, type: 3}
   m_Name: Bob_interesting
   m_EditorClassIdentifier: 
-  Dialouge: []
-  Speakers: []
+  Dialouge:
+  - if you've got the right eye and skills yeah.
+  Speakers:
+  - Bob
   responses: []
   Items: []

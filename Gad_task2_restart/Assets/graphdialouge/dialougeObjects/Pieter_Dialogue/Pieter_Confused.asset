@@ -10,17 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968a04e910db89d4a9783aef540690cc, type: 3}
-  m_Name: Pieter_Start
+  m_Name: Pieter_Confused
   m_EditorClassIdentifier: 
   Dialouge:
-  - What are you doing out so late at night?
-  - It's not safe
+  - Oh...uhh..okay...wait, what?
   Speakers:
   - Pieter
-  - Pieter
-  responses:
-  - responseText: Jogging around the block.
-    DialougeObject: {fileID: 11400000, guid: 4bd5e242d0d633f42822bc74114bfea4, type: 2}
-  - responseText: Don't worry. The developers don't know how to code enemies.
-    DialougeObject: {fileID: 11400000, guid: fe383d4ab277eee449e4e0ced0400b01, type: 2}
+  responses: []
   Items: []

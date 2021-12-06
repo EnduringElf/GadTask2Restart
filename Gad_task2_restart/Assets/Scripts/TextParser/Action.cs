@@ -64,7 +64,8 @@ public class Action : MonoBehaviour
                 Textaction.Talk(GameObject.Find(Object.LiteralValue));
                 break;
             case "pick":
-
+                Debug.Log("textaction action script = " + Textaction.Item_inrange);
+                Textaction.Pick(GameObject.Find(Object.LiteralValue));
                 break;
             default:
                // Debug.LogError("execute command faied no command used");

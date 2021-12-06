@@ -31,6 +31,7 @@ public class Parser : MonoBehaviour
                 case "FixedNpc":
                 case "npc":
                 case "item":
+                case "FixedItem":
                     t.TokenType = TokenType.OBJECT; t.LiteralValue = word;
                     //Debug.Log("added object token"); 
                     break;

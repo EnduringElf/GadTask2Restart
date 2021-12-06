@@ -13,7 +13,7 @@ public class Textaction : MonoBehaviour
     //private static Textaction instance;
 
     [SerializeField]public bool NPC_inrange;
-    public bool Item_inrange;
+    [SerializeField] public bool Item_inrange;
 
 
     //public static Textaction getInstance()
@@ -71,16 +71,17 @@ public class Textaction : MonoBehaviour
         
     }
 
-    public void Pick()
+    public void Pick(GameObject @object)
     {
-        if (Item_inrange)
+        if (Item_inrange == true)
         {
+            Player.GetComponent<Player>().AddObject(@object.name);
             //getInstance();
             
         }
         else
         {
-            Debug.Log("NPC not in range");
+            Debug.Log("item not in range");
         }
     }
 

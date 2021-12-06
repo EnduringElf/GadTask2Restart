@@ -10,11 +10,12 @@ public class DialougeUI : MonoBehaviour
     [SerializeField] private TMP_Text textlabel;
     [SerializeField] public DialougeObject testdiag;
     [SerializeField] private TMP_Text Speaker;
-    [SerializeField] private TMP_Text npcnearbyText;
-    [SerializeField] private TMP_Text ItemsNearbyText;
+    [SerializeField] public TMP_Text npcnearbyText;
+    [SerializeField] public TMP_Text ItemsNearbyText;
     [SerializeField] private TMP_Text Availblenames;
     [SerializeField] public GameObject Player;
-
+    [SerializeField] public GameObject npcnearbyBox;
+    [SerializeField] public GameObject itemsnearbybox;
     private Player player;
     
 
@@ -22,11 +23,12 @@ public class DialougeUI : MonoBehaviour
     private TypeWriterEffect TypeWriterEffect;
     private static DialougeUI instance;
 
-    public string[] npcnearby;
-    private string npcnearbytext;
+    //public string[] npcnearby;
+    //private string npcnearbytext;
 
-    public string[] itemsnearby;
-    private string _itemsnearby;
+    //public string[] itemsnearby;
+    //private string _itemsnearby;
+    public string[] avaiblenames;
     public static DialougeUI getInstance()
     {
         if (instance == null)
@@ -43,10 +45,18 @@ public class DialougeUI : MonoBehaviour
         TypeWriterEffect = GetComponent<TypeWriterEffect>();
         CloseDialougeBox();
         responseHandler = GetComponent<ResponseHandler>();
-        
+        npcnearbyBox.SetActive(false);
+        itemsnearbybox.SetActive(false);
+
         player = Player.GetComponent<Player>();
 
         //showDialouge(testdiag);
+        string temp = "";
+        foreach(string name in avaiblenames)
+        {
+            temp += $"{name} \n";
+        }
+        Availblenames.text = temp;
 
        
     }
@@ -85,8 +95,6 @@ public class DialougeUI : MonoBehaviour
         {
             responseHandler.showResponses(dialougeObject.Responses);
             
-            
-
         }else if(dialougeObject.HasObjects)
         {
             List<ObjectDiag> objectDiags = new List<ObjectDiag>();

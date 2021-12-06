@@ -13,8 +13,6 @@ public class TypeWriterEffect : MonoBehaviour
 
     private IEnumerator TypeText(string text, TMP_Text textlabel)
     {
-       
-
         float t = 0;
         int charIndex = 0;
 
@@ -25,9 +23,6 @@ public class TypeWriterEffect : MonoBehaviour
             charIndex = Mathf.Clamp(charIndex, 0, text.Length);
 
             textlabel.text = text.Substring(0, charIndex);
-
-
-
             yield return null;
         }
 

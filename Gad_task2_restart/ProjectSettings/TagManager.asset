@@ -10,6 +10,7 @@ TagManager:
   - UI
   - npc
   - item
+  - destionations
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968a04e910db89d4a9783aef540690cc, type: 3}
+  m_Name: Pieter_Start
+  m_EditorClassIdentifier: 
+  Dialouge:
+  - Remember the homework
+  - If you can't figure it out, don't worry, it's quite simple
+  Speakers:
+  - Pieter
+  - Pieter
+  responses:
+  - responseText: No it ain't
+    DialougeObject: {fileID: 11400000, guid: 4bd5e242d0d633f42822bc74114bfea4, type: 2}
+  - responseText: So easy
+    DialougeObject: {fileID: 11400000, guid: 4bd5e242d0d633f42822bc74114bfea4, type: 2}
+  Items: []

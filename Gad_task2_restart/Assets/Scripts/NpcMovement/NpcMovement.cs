@@ -11,6 +11,7 @@ public class NpcMovement : MonoBehaviour
     NavMeshAgent theAgent;
     private Animator npcAnimator;
     bool activewalk;
+    public bool Playercontrol = false;
 
     
 
@@ -25,29 +26,45 @@ public class NpcMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(activewalk == true)
-        {
-            if (!endreach)
-            {
-                theAgent.SetDestination(theDestination.transform.position);
-                if (theDestination.transform.position.x == gameObject.transform.position.x && theDestination.transform.position.z == gameObject.transform.position.z)
-                {
-                    endreach = true;
-                }
-            }
-            else
-            {
-                theAgent.SetDestination(secondD.transform.position);
-                if (secondD.transform.position.x == gameObject.transform.position.x && secondD.transform.position.z == gameObject.transform.position.z)
-                {
-                    endreach = false;
-                }
-            }
-        }
        
+        if(Playercontrol == true)
+        {
+            
+            
+                //Debug.Log("destionation postion:" + theDestination.transform.position);
+                theAgent.SetDestination(theDestination.transform.position);
+            
+            
+            
+                
+            
 
-        
-        
+        }
+        else
+        {
+            if (activewalk == true)
+            {
+                if (!endreach)
+                {
+                    theAgent.SetDestination(theDestination.transform.position);
+                    if (theAgent.remainingDistance >= 0.10f)
+                    {
+                        endreach = true;
+                    }
+                }
+                else
+                {
+                    theAgent.SetDestination(secondD.transform.position);
+                    if (theAgent.remainingDistance >= 0.10f)
+                    {
+                        endreach = false;
+                    }
+                }
+            }
+
+        }
+
+
         //if (theDestination.transform.position.x == gameObject.transform.position.x && theDestination.transform.position.z == gameObject.transform.position.z )
         //{
         //    npcAnimator.SetBool("IsMoving", false);
@@ -58,26 +75,26 @@ public class NpcMovement : MonoBehaviour
         //}
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        activewalk = false;
-        Vector3 nexttoplayer = other.transform.position;
-        nexttoplayer.x += 1.5f;
-        theAgent.SetDestination(other.transform.position);
-        if (other.gameObject.tag == "Player")
-        {
-            npcAnimator.SetBool("IsMoving", false);
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    activewalk = false;
+    //    Vector3 nexttoplayer = other.transform.position;
+    //    nexttoplayer.x += 1.5f;
+    //    theAgent.SetDestination(other.transform.position);
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        npcAnimator.SetBool("IsMoving", false);
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        activewalk = true;
-        if (other.gameObject.tag == "Player")
-        {
-            npcAnimator.SetBool("IsMoving", true);
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    activewalk = true;
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        npcAnimator.SetBool("IsMoving", true);
+    //    }
+    //}
 
     
 

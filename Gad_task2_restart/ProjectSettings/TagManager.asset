@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Item
   - UI
+  - npc
   layers:
   - Default
   - TransparentFX
